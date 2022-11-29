@@ -1,0 +1,1 @@
+insert into member (member_id, password, roles) values ('memberA', '1234', 'USER');

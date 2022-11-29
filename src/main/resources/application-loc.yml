@@ -1,0 +1,26 @@
+spring:
+  h2:
+    console:
+      path: /jwt
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:jwt
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        format_sql: true
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+      data-locations: classpath:sql/data.sql
+
+# ??? ??? ???? ?? secret Key?? HS256 ????? ???? ??, 256???? ????.
+# ???? ??? ? 8bit ??? 32?? ???? ??.
+jwt:
+  secret: VlwEyVBsYt9V7zq57TejMnVUyzblYcfPQye08f7MGVA9XkHa
